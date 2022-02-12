@@ -8,6 +8,10 @@ router.get('/', function(req, res, next) {
         console.log(err, res)
         pool.end()
       })
+    pool.query('INSERT INTO test ("username") values ("bob")',
+        (err,res) => {
+            if (err) return next(err);
+        });
     res.send('respond with a resource');
   });
   
