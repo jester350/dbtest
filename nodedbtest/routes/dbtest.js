@@ -4,7 +4,7 @@ const pool = require('../db');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    pool.query('INSERT INTO oz ("username") values ("bob")',(err, res) => {
+    pool.query('INSERT INTO oz ("username") values (\'bob\')',(err, res) => {
         console.log(err, res)
         pool.end()
       })
