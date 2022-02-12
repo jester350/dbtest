@@ -4,7 +4,7 @@ const pool = new Pool({
   host: '127.0.0.1',
   database: 'test',
   password: 'Fugazi3077!',
-  port: 3211,
+  port: 5432,
 })
 pool.query('SELECT NOW()', (err, res) => {
   console.log(err, res)
@@ -15,7 +15,7 @@ const client = new Client({
   host: '127.0.0.1',
   database: 'test',
   password: 'Fugazi3077!',
-  port: 3211,
+  port: 5432,
 })
 client.connect()
 client.query('SELECT NOW()', (err, res) => {
